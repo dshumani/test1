@@ -69,17 +69,6 @@ class Process():
         self._GenerateTestFilesWithIncompleteData()
         self.create_tables()
 
-    def _GetBaseDataStructure(self) -> dict:
-        """
-        :return: {'stk_001': None, 'stk_002': None, 'stk_003': None, 'stk_004': None,
-        'stk_005': None, 'stk_006': None, 'stk_007': None, 'stk_008': None,
-        'stk_009': None, 'stk_010': None, 'stk_011': None,..
-        }
-        """
-        BaseDataStructure = {}
-        for n in range(1, 201):
-            BaseDataStructure.setdefault(f"stk_{n:03}", None)
-        return BaseDataStructure
 
     def PartitionFilesByDate(self) -> None:
         """
